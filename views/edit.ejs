@@ -1,0 +1,27 @@
+<% include partials/header.ejs %>
+
+<div id="addMembers">
+
+
+<h1>Add Members</h1>
+
+
+<form action="/members" method="POST">
+    <input type="text" placeholder="First Name" name="firstName">
+    <input type="text" placeholder="Last Name" name="lastName">
+    <input type="text" placeholder="Class" name="year">
+    <input type="text" placeholder="Graduation Year" name="gradYear">
+    
+
+    <button>Submit</button>
+
+</form>
+
+
+</div>
+
+
+
+ 
+
+<% include partials/footer.ejs %>

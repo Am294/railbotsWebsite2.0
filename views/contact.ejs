@@ -1,0 +1,49 @@
+<% include partials/header.ejs %>
+
+
+<h1>Contact Information</h1>
+
+  
+<h3 class="h3Space2"><span class="fontStyle">School:</span>Lincoln Park High School</h3>
+<h3 class="h3Space2"><span class="fontStyle">Location:</span>Lincoln Park,Mi</h3>
+<h3 class="h3Space2"><span class="fontStyle">Phone Number:</span>313-389-0234 extension 21516    </h3>
+<h3 class="h3Space2"><span class="fontStyle">Email:</span>robotics@lpps.info</h3>
+
+
+
+<div id="messageStyle">
+    <h1>Contact Us</h1>
+<div id="messageGrid">
+
+<form action="/contact/confirmation" method="POST">
+    <label for="firstName">First Name</label>
+    <input type="text" placeholder=" First Name" name="firstName">
+
+    <label for="lastName">Last Name</label>
+    <input type="text" placeholder="Last Name" name="lastName">
+
+    <label for="email">Email</label>
+    <input type="email" placeholder="Email" name="email">
+   
+    <label for="phoneNumber">Phone Number</label>
+    <input type="number" placeholder="Phone Number" name="phoneNumber">
+
+    <label for="subject">Subject</label>
+    <input type="text" placeholder="Subject" name="subject">
+
+    
+
+    <label for="message">Message</label>
+    <textarea name="message"></textarea>
+
+
+
+    <button>Submit</button>
+
+</div>
+
+</div>
+
+</form>
+
+<% include partials/footer.ejs %>

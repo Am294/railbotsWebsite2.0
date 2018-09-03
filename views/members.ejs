@@ -1,0 +1,85 @@
+<% include partials/header.ejs %>
+
+
+<div id="teamPhoto">
+    <img src="https://dl.dropboxusercontent.com/s/1qwtkqya0tgrcz0/teamPhotos.jpg?dl=0">
+</div>
+
+
+<% let counter=0; %>
+<% alumCounter=0 %>
+<h1> Current Members</h1>
+
+  <div id="memberTableSpacing">
+  <table >
+
+  <tr>
+
+<th class="row1">Name</th>
+<th class="row1">Class</th>
+
+  </tr>
+
+<% members.forEach( function (member){ %>
+
+  <tr>
+    
+         <% if(counter%2===0 && member.year!=="Alumni"){ %>
+    <th class="boxClickWhite">  <%= member.firstName + " " + member.lastName %> </th>
+    <th class="boxClickWhite">  <%= member.year  %> </th>
+         
+        <%  } %>
+         
+        <% if(counter%2===1 && member.year!=="Alumni"){ %>
+          <th class="otherRow boxClickBlue">  <%= member.firstName + " " + member.lastName %> </th>
+          <th class="otherRow boxClickBlue">  <%= member.year  %> </th>
+               
+              <%  } %>
+
+        <% counter++; %>
+  </tr>
+
+  
+<% }); %> 
+</table> 
+</div>
+
+      
+<h1>Alumni</h1>
+
+<% counter=0; %>
+<div id="alumniTableSpacing">
+        <table >
+      
+        <tr>
+      
+      <th class="row1">Name</th>
+      <th class="row1">Graduating Year</th>
+      
+        </tr>
+      
+      <% members.forEach( function (member){ %>
+      
+        <tr>
+          
+               <% if(counter%2===1 && member.year==="Alumni"){ %>
+          <th class="boxClickWhite">  <%= member.firstName + " " + member.lastName %> </th>
+          <th class="boxClickWhite">  <%= member.gradYear  %> </th>
+               
+              <%  } %>
+               
+              <% if(counter%2===0 && member.year==="Alumni"){ %>
+                <th class="otherRow boxClickBlue">  <%= member.firstName + " " + member.lastName %> </th>
+                <th class="otherRow boxClickBlue">  <%= member.gradYear  %> </th>
+                     
+                    <%  } %>
+      
+              <% counter++; %>
+        </tr>
+      
+        
+      <% }); %> 
+      </table> 
+      </div>
+
+<% include partials/footer.ejs %>
