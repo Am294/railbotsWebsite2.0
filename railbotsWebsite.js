@@ -4,6 +4,7 @@ const request=require('request');
 const bodyParser=require('body-parser');
 const nodeMailer = require('nodemailer');
 const mongoose = require('mongoose');
+const URL="mongodb://DrewMo:abc123@ds147592.mlab.com:47592/heroku_9tf9mxdr"
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -29,7 +30,7 @@ function sendMessage(messageObject){
       
       let mailOptions = {
         from: 'railbotsmessenger@gmail.com',
-        to: '7339Roxas@gmail.com',
+        to: 'robotics@lpps.info',
         subject: messageObject.subject,
         text: "Name:"+messageObject.firstName+messageObject.lastName+"\n"+
         "Email:"+messageObject.email+"\n"+
@@ -48,7 +49,8 @@ function sendMessage(messageObject){
 
 
 
-  mongoose.connect("mongodb://localhost:27017/railbots", { useNewUrlParser: true });
+  //mongoose.connect("mongodb://localhost:27017/railbots", { useNewUrlParser: true });
+  mongoose.connect(URL, { useNewUrlParser: true });
 
   //Member Schema
  let memberSchema= new mongoose.Schema({
