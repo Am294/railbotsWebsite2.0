@@ -11,6 +11,7 @@
   "engines": {
     "node": "8.11.3"
   },
+  "web": "node railbotsWebiste.js",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
