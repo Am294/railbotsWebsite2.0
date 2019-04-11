@@ -3,15 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "railbotsWebsite.js",
-  "scripts": {
-    "start": "node railbotsWebsite.js"
-},
   "author": "",
   "license": "ISC",
   "engines": {
     "node": "8.11.3"
   },
-  "web": "node railbotsWebiste.js",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
@@ -21,5 +17,9 @@
     "mongoose": "^5.2.9",
     "nodemailer": "^4.6.8",
     "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node railbotsWebsite.js"
   }
 }
